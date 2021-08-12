@@ -1,0 +1,16 @@
+// Breakpoints
+
+$breakpoints: (
+  "xs": 400px,
+  "sm": 576px,
+  "md": 890px,
+  "lg": 1050px,
+  "xl": 1240px,
+);
+
+// Use ex: @include breakpoint(md) { ... }
+@mixin breakpoint($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
