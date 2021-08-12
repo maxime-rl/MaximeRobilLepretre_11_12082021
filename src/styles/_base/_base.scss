@@ -383,3 +383,15 @@ a {
     text-decoration: underline;
   }
 }
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.active-link {
+  text-decoration: underline;
+  color: $colorPrimary;
+}
