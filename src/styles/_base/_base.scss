@@ -391,7 +391,13 @@ video {
   object-fit: cover;
 }
 
+// utility class
 .active-link {
   text-decoration: underline;
   color: $colorPrimary;
+}
+
+.global-layout-wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
 }

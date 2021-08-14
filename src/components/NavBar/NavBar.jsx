@@ -5,7 +5,7 @@ import "./NavBar.scss";
 class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar">
+      <nav className="navbar global-layout-wrapper">
         <Link to="/">
           <img src="./assets/kasa_logo_color.svg" alt="Logo Kasa" />
         </Link>
