@@ -1,8 +1,19 @@
 import React, { Component } from "react";
+import { Banner } from "../../components";
 
 class HomePage extends Component {
   render() {
-    return <div>Home page</div>;
+    return (
+      <>
+        <header>
+          <Banner
+            src="../../assets/home_banner.jpg"
+            alt="Paysage nature"
+            title="Chez vous, partout et ailleurs"
+          />
+        </header>
+      </>
+    );
   }
 }
 

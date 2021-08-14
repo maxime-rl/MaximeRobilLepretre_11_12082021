@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import kasaLogoColor from "../../assets/kasa_logo_color.svg";
 import "./NavBar.scss";
+
 class NavBar extends Component {
   render() {
     return (
       <nav className="navbar">
         <Link to="/">
-          <img src={kasaLogoColor} alt="Logo Kasa" />
+          <img src="./assets/kasa_logo_color.svg" alt="Logo Kasa" />
         </Link>
         <ul>
           <li>
