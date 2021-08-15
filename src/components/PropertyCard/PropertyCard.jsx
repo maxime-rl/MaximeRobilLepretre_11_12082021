@@ -7,7 +7,7 @@ class PropertyCard extends Component {
     const { id, title, src } = this.props;
 
     return (
-      <Link to={"/property-location/" + id}>
+      <Link to={`/property-location/${id}`}>
         <article>
           <h2>{title}</h2>
           <img src={src} alt={title} />
