@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Banner, PropertyList } from "../../components";
 import { data } from "../../data/data";
+import "./HomePage.scss";
 
 class HomePage extends Component {
   render() {
@@ -13,7 +14,7 @@ class HomePage extends Component {
             title="Chez vous, partout et ailleurs"
           />
         </header>
-        <main className="wrapper">
+        <main className="main-home-page global-layout-wrapper">
           <PropertyList kasa_DATA={data} />
         </main>
       </>

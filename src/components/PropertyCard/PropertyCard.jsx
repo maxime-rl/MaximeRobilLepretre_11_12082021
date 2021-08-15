@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import "./PropertyCard.scss";
 
 class PropertyCard extends Component {
   render() {
@@ -8,7 +9,7 @@ class PropertyCard extends Component {
 
     return (
       <Link to={`/property-location/${id}`}>
-        <article>
+        <article className="property-card">
           <h2>{title}</h2>
           <img src={src} alt={title} />
         </article>

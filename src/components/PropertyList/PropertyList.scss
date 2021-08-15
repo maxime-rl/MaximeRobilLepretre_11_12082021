@@ -1,0 +1,18 @@
+@import "../../styles/_utils/mixins.scss";
+@import "../../styles/_utils/variables.scss";
+
+.property-list {
+  @include breakpoint(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px 15px;
+    padding: 20px 20px;
+    background-color: $colorGray;
+    border-radius: 25px;
+  }
+  @include breakpoint(xl) {
+    margin: 60px 0;
+    padding: 26px 18px;
+  }
+}

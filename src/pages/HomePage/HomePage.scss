@@ -1,0 +1,7 @@
+@import "../../styles/_utils/mixins.scss";
+
+.main-home-page {
+  @include breakpoint(xl) {
+    padding: 0 15px;
+  }
+}
