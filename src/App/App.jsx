@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
 import { NavBar, Footer } from "../components";
 import {
   HomePage,
@@ -21,9 +25,10 @@ class App extends Component {
           <Route path="/about">
             <AboutPage />
           </Route>
-          <Route path="/property-location">
-            <PropertyLocationPage />
-          </Route>
+          <Route
+            path="/property-location/:id"
+            render={(props) => <PropertyLocationPage {...props} />}
+          />
           <Route>
             <Error404Page />
           </Route>
