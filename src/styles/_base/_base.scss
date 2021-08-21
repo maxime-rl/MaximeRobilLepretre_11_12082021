@@ -387,11 +387,18 @@ a {
 img,
 video {
   max-width: 100%;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
 
+// utility class
 .active-link {
   text-decoration: underline;
   color: $colorPrimary;
+}
+
+.global-layout-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
 }

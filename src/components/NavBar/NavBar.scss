@@ -1,3 +1,5 @@
+@import "../../styles/_utils/mixins.scss";
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,6 +7,9 @@
 
   img {
     width: 100px;
+    @include breakpoint(xl) {
+      width: 130px;
+    }
   }
 
   ul {
@@ -16,6 +21,12 @@
 
     &:last-child {
       padding: 0 0 0 20px;
+    }
+
+    a {
+      @include breakpoint(xl) {
+        font-size: 22px;
+      }
     }
   }
 }
