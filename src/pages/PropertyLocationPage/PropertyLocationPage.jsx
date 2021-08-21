@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { data } from "../../data/data";
 import Error404Page from "../Error404Page/Error404Page";
-import { Rating } from "../../components";
+import { Rating, Dropdown } from "../../components";
 
 class PropertyLocationPage extends Component {
   render() {
@@ -12,12 +12,15 @@ class PropertyLocationPage extends Component {
       return <Error404Page />;
     }
 
-    const { title, rating } = currentProperty;
+    const { title, rating, description, equipments } =
+      currentProperty;
 
     return (
       <>
         <div>{title}</div>
         <Rating rating={rating} />
+        <Dropdown header="Description" content={description} />
+        <Dropdown header="Équipement" content={equipments} />
       </>
     );
   }

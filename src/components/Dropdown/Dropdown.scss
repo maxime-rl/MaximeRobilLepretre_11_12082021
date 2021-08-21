@@ -1,0 +1,38 @@
+.dropdown {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  &__arrow {
+    object-fit: contain;
+    width: 20px;
+
+    &--up {
+      transform: rotate(180deg);
+    }
+  }
+
+  p {
+    line-height: 22px;
+  }
+
+  &__content {
+    padding: 10px;
+
+    &--open {
+      display: block;
+    }
+
+    &--close {
+      display: none;
+    }
+
+    li {
+      padding: 3px 0;
+    }
+  }
+}
