@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../assets/kasa_logo_color.svg";
 import "./NavBar.scss";
 
 class NavBar extends Component {
@@ -7,7 +8,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar global-layout-wrapper">
         <Link to="/">
-          <img src="./assets/kasa_logo_color.svg" alt="Logo Kasa" />
+          <img src={logo} alt="Logo Kasa" />
         </Link>
         <ul>
           <li>

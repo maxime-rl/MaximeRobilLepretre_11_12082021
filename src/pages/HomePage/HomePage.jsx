@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Banner, PropertyList } from "../../components";
+import homeBanner from "../../assets/home_banner.jpg";
 import { data } from "../../data/data";
 import "./HomePage.scss";
 
@@ -9,7 +10,7 @@ class HomePage extends Component {
       <>
         <header>
           <Banner
-            src="../../assets/home_banner.jpg"
+            src={homeBanner}
             alt="Paysage nature"
             title="Chez vous, partout et ailleurs"
           />

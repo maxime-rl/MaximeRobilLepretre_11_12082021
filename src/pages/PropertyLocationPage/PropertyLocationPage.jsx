@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { data } from "../../data/data";
 import Error404Page from "../Error404Page/Error404Page";
+import { Rating } from "../../components";
 
 class PropertyLocationPage extends Component {
   render() {
@@ -11,9 +12,14 @@ class PropertyLocationPage extends Component {
       return <Error404Page />;
     }
 
-    const { title } = currentProperty;
+    const { title, rating } = currentProperty;
 
-    return <div>{title}</div>;
+    return (
+      <>
+        <div>{title}</div>
+        <Rating rating={rating} />
+      </>
+    );
   }
 }
 

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Banner } from "../../components";
+import aboutBanner from "../../assets/about_banner.jpg";
 
 class AboutPage extends Component {
   render() {
     return (
       <>
         <header>
-          <Banner src="../../assets/about_banner.jpg" alt="Paysage nature" />
+          <Banner src={aboutBanner} alt="Paysage nature" />
         </header>
       </>
     );
