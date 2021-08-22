@@ -1,12 +1,15 @@
 import React, { Component } from "react";
+import "./TagList.scss";
 
 class TagList extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <ul>
+      <ul className="tag-list">
         {tags.map((tag, index) => (
-          <li key={index}>{tag}</li>
+          <li className="tag-list__tag" key={index}>
+            {tag}
+          </li>
         ))}
       </ul>
     );

@@ -1,0 +1,70 @@
+@import "../../styles/_utils/variables.scss";
+@import "../../styles/_utils/mixins.scss";
+
+.dropdown {
+  margin: 10px 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $colorPrimary;
+    color: $colorWhite;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    @include breakpoint(xl) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__arrow {
+    object-fit: contain;
+    width: 15px;
+
+    &--up {
+      transform: rotate(180deg);
+    }
+  }
+
+  p {
+    line-height: 18px;
+
+    @include breakpoint(xl) {
+      line-height: 22px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: -5px;
+    z-index: -1;
+    margin: 0;
+    padding: 20px 10px 10px 10px;
+    font-size: 1.2rem;
+    background-color: $colorGray;
+    border-radius: 0 0 5px 5px;
+
+    @include breakpoint(xl) {
+      font-size: 1.6rem;
+      line-height: 22px;
+    }
+
+    &--open {
+      display: block;
+      height: calc(100% - 65px);
+    }
+
+    &--close {
+      display: none;
+    }
+
+    li {
+      padding: 1px 0;
+    }
+  }
+}

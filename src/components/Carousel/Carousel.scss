@@ -1,0 +1,51 @@
+@import "../../styles/_utils/variables.scss";
+@import "../../styles/_utils/mixins.scss";
+
+.carousel {
+  position: relative;
+
+  &__btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    img {
+      object-fit: contain;
+
+      @include breakpoint(md) {
+        width: 35px;
+      }
+
+      @include breakpoint(xl) {
+        width: 50px;
+      }
+    }
+
+    &--prev {
+      left: 0;
+      img {
+        transform: rotate(90deg);
+      }
+    }
+
+    &--next {
+      right: 0;
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__picture {
+    height: 255px;
+    border-radius: $radius-10;
+
+    @include breakpoint(xl) {
+      height: 415px;
+      border-radius: $radius-25;
+    }
+  }
+}

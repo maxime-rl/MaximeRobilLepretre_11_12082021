@@ -1,0 +1,25 @@
+@import "../../styles/_utils/variables.scss";
+@import "../../styles/_utils/mixins.scss";
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px 5px 0;
+    padding: 3px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $colorWhite;
+    background-color: $colorPrimary;
+    border-radius: 5px;
+
+    @include breakpoint(xl) {
+      padding: 0 35px;
+      height: 25px;
+      font-size: 1.4rem;
+    }
+  }
+}
