@@ -8,7 +8,6 @@ import {
   Error404Page,
 } from "../pages";
 import { ScrollToTop, ReFocus } from "../utils";
-import "./App.scss";
 
 class App extends Component {
   render() {

@@ -3,7 +3,7 @@
 
 .property-card {
   position: relative;
-  margin: 15px;
+  margin: 15px 0;
   @include breakpoint(md) {
     margin: 30px;
   }
@@ -33,7 +33,7 @@
   &__title {
     position: absolute;
     z-index: 5;
-    bottom: 15px;
+    bottom: 10px;
     padding: 0 0 0 15px;
     font-size: 1.8rem;
     line-height: 26px;

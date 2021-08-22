@@ -1,12 +1,20 @@
 @import "../../styles/_utils/mixins.scss";
 
+.about-header {
+  .banner__picture {
+    height: 223px;
+  }
+}
+
 .about-main {
-  padding: 0 15px;
+  flex-grow: 1;
+  padding: 20px 15px;
   @include breakpoint(sm) {
     padding: 40px 15px;
   }
   @include breakpoint(xl) {
     max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
 
     .dropdown {

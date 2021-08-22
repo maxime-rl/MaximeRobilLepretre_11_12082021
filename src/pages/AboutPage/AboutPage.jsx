@@ -8,7 +8,7 @@ class AboutPage extends Component {
   render() {
     return (
       <>
-        <header>
+        <header className="about-header">
           <Banner src={aboutBanner} alt="Paysage nature" />
         </header>
         <main className="about-main">

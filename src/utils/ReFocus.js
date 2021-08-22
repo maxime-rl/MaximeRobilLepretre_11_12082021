@@ -10,7 +10,7 @@ class ReFocus extends Component {
 
   render() {
     return (
-      <div ref={(n) => (this.node = n)} tabIndex={-1}>
+      <div className="app" ref={(n) => (this.node = n)} tabIndex={-1}>
         {this.props.children}
       </div>
     );
