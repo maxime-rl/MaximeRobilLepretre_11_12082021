@@ -14,11 +14,9 @@
 
     img {
       object-fit: contain;
-
       @include breakpoint(md) {
         width: 35px;
       }
-
       @include breakpoint(xl) {
         width: 50px;
       }
@@ -26,6 +24,7 @@
 
     &--prev {
       left: 0;
+
       img {
         transform: rotate(90deg);
       }
@@ -33,6 +32,7 @@
 
     &--next {
       right: 0;
+
       img {
         transform: rotate(-90deg);
       }
@@ -42,7 +42,6 @@
   &__picture {
     height: 255px;
     border-radius: $radius-10;
-
     @include breakpoint(xl) {
       height: 415px;
       border-radius: $radius-25;

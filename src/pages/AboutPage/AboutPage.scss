@@ -2,11 +2,9 @@
 
 .about-main {
   padding: 0 15px;
-
   @include breakpoint(sm) {
     padding: 40px 15px;
   }
-
   @include breakpoint(xl) {
     max-width: 1000px;
     margin: 0 auto;

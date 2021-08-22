@@ -16,7 +16,6 @@
     font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
-
     @include breakpoint(xl) {
       font-size: 1.8rem;
     }
@@ -25,7 +24,6 @@
   &__arrow {
     object-fit: contain;
     width: 15px;
-
     @include breakpoint(xl) {
       width: 20px;
     }
@@ -37,7 +35,6 @@
 
   p {
     line-height: 18px;
-
     @include breakpoint(xl) {
       line-height: 22px;
     }
@@ -52,7 +49,6 @@
     font-size: 1.2rem;
     background-color: $colorGray;
     border-radius: 0 0 5px 5px;
-
     @include breakpoint(xl) {
       font-size: 1.6rem;
       line-height: 22px;
