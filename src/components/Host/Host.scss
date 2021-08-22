@@ -1,0 +1,21 @@
+.host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    font-size: 12px;
+    font-weight: 500;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__picture {
+    margin: 0 0 0 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+}

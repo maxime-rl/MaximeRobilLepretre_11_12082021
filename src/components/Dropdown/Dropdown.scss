@@ -1,15 +1,23 @@
+@import "../../styles/_utils/variables.scss";
+
 .dropdown {
   &__header {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: $colorPrimary;
+    color: $colorWhite;
+    font-size: 13px;
+    font-weight: 500;
     cursor: pointer;
   }
 
   &__arrow {
     object-fit: contain;
-    width: 20px;
+    width: 15px;
 
     &--up {
       transform: rotate(180deg);
@@ -17,11 +25,17 @@
   }
 
   p {
-    line-height: 22px;
+    line-height: 18px;
   }
 
   &__content {
-    padding: 10px;
+    position: relative;
+    top: -5px;
+    z-index: -1;
+    margin: 0;
+    padding: 20px 10px 10px 10px;
+    background-color: $colorGray;
+    font-size: 12px;
 
     &--open {
       display: block;
@@ -32,7 +46,7 @@
     }
 
     li {
-      padding: 3px 0;
+      padding: 1px 0;
     }
   }
 }

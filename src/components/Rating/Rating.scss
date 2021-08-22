@@ -1,0 +1,10 @@
+.rating-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__rate {
+    margin: 0 3px;
+    width: 15px;
+  }
+}

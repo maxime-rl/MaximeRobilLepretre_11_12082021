@@ -1,0 +1,17 @@
+@import "../../styles/_utils/variables.scss";
+
+.tag-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__tag {
+    margin: 0 5px;
+    padding: 3px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $colorWhite;
+    background-color: $colorPrimary;
+    border-radius: 5px;
+  }
+}
