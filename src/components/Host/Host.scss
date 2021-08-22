@@ -1,10 +1,11 @@
 .host {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   &__name {
-    font-size: 12px;
+    text-align: end;
+    font-size: 1.2rem;
     font-weight: 500;
 
     p {

@@ -15,7 +15,7 @@ class HomePage extends Component {
             title="Chez vous, partout et ailleurs"
           />
         </header>
-        <main className="main-home-page global-layout-wrapper">
+        <main className="home-main global-layout-wrapper">
           <PropertyList kasa_DATA={data} />
         </main>
       </>

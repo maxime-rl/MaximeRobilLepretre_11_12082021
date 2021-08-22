@@ -2,11 +2,10 @@
 
 .tag-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 
   &__tag {
-    margin: 0 5px;
+    margin: 5px 10px 5px 0;
     padding: 3px 20px;
     font-size: 1rem;
     font-weight: 500;

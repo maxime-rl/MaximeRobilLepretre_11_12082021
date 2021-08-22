@@ -1,0 +1,52 @@
+.property-header {
+  padding: 0 15px 15px 15px;
+}
+
+.property-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title"
+    "location location"
+    "tag-list tag-list"
+    "rating-list host"
+    "dropdown-one dropdown-one"
+    "dropdown-two dropdown-two";
+  padding: 0 15px 15px 15px;
+
+  &__title {
+    grid-area: title;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 26px;
+    font-weight: 500;
+  }
+
+  &__location {
+    grid-area: location;
+    margin: 5px 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .tag-list {
+    grid-area: tag-list;
+  }
+
+  .rating-list {
+    grid-area: rating-list;
+  }
+
+  .host {
+    grid-area: host;
+  }
+
+  .dropdown {
+    grid-area: dropdown-one;
+  }
+
+  .dropdown:last-child {
+    grid-area: dropdown-two;
+  }
+}

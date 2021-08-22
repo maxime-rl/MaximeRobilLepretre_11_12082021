@@ -1,6 +1,8 @@
 @import "../../styles/_utils/variables.scss";
 
 .dropdown {
+  margin: 10px 0;
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -10,7 +12,7 @@
     border-radius: 5px;
     background-color: $colorPrimary;
     color: $colorWhite;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
   }
@@ -34,8 +36,9 @@
     z-index: -1;
     margin: 0;
     padding: 20px 10px 10px 10px;
+    font-size: 1.2rem;
     background-color: $colorGray;
-    font-size: 12px;
+    border-radius: 0 0 5px 5px;
 
     &--open {
       display: block;
