@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import arrow from "../../assets/arrow.svg";
 import PropTypes from "prop-types";
+import "./Carousel.scss";
 
 class Carousel extends Component {
   constructor(props) {
@@ -34,22 +35,29 @@ class Carousel extends Component {
     const { currentPictureIndex } = this.state;
 
     return (
-      <>
+      <div className="carousel">
         {pictures.length > 1 && (
-          <button onClick={() => this.goToPrevPicture()}>
+          <button
+            className="carousel__btn-nav carousel__btn-nav--prev"
+            onClick={() => this.goToPrevPicture()}
+          >
             <img src={arrow} alt="boutton image précédente du carousel" />
           </button>
         )}
         <img
+          className="carousel__picture"
           src={pictures[currentPictureIndex]}
           alt={`Photo ${alt} numéro ${currentPictureIndex + 1}`}
         />
         {pictures.length > 1 && (
-          <button onClick={() => this.goToNextPicture()}>
+          <button
+            className="carousel__btn-nav carousel__btn-nav--next"
+            onClick={() => this.goToNextPicture()}
+          >
             <img src={arrow} alt="boutton image suivante du carousel" />
           </button>
         )}
-      </>
+      </div>
     );
   }
 }

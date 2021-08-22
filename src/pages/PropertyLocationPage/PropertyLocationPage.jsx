@@ -12,18 +12,31 @@ class PropertyLocationPage extends Component {
       return <Error404Page />;
     }
 
-    const { title, rating, description, equipments, pictures, tags, host } =
-      currentProperty;
+    const {
+      title,
+      rating,
+      description,
+      equipments,
+      pictures,
+      tags,
+      host,
+      location,
+    } = currentProperty;
 
     return (
       <>
-        <div>{title}</div>
-        <Carousel pictures={pictures} alt={title} />
-        <TagList tags={tags} />
-        <Rating rating={rating} />
-        <Host name={host.name} src={host.picture} />
-        <Dropdown header="Description" content={description} />
-        <Dropdown header="Équipement" content={equipments} />
+        <header>
+          <Carousel pictures={pictures} alt={title} />
+        </header>
+        <main>
+          <h1>{title}</h1>
+          <p>{location}</p>
+          <TagList tags={tags} />
+          <Rating rating={rating} />
+          <Host name={host.name} src={host.picture} />
+          <Dropdown header="Description" content={description} />
+          <Dropdown header="Équipement" content={equipments} />
+        </main>
       </>
     );
   }

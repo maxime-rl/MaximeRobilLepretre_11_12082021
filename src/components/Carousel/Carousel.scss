@@ -1,0 +1,33 @@
+@import "../../styles/_utils/variables.scss";
+
+.carousel {
+  position: relative;
+
+  &__btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &--prev {
+      left: 0;
+      img {
+        transform: rotate(90deg);
+      }
+    }
+
+    &--next {
+      right: 0;
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__picture {
+    height: 255px;
+    border-radius: $radius-10;
+  }
+}
