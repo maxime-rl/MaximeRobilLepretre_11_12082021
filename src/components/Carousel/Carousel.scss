@@ -4,8 +4,33 @@
 .carousel {
   position: relative;
 
+  &::after {
+    position: absolute;
+    content: " ";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 255px;
+    border-radius: $radius-10;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(112, 112, 112, 0) 10%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.01) 51%,
+      rgba(113, 113, 113, 0) 90%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    @include breakpoint(xl) {
+      height: 415px;
+      border-radius: $radius-25;
+    }
+  }
+
   &__btn-nav {
     position: absolute;
+    z-index: 5;
     top: 50%;
     transform: translate(0, -50%);
     border: 0;
