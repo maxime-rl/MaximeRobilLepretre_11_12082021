@@ -1,0 +1,27 @@
+@import "../../styles/_utils/mixins.scss";
+
+.about-main {
+  padding: 0 15px;
+
+  @include breakpoint(sm) {
+    padding: 40px 15px;
+  }
+
+  @include breakpoint(xl) {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .dropdown {
+      margin: 25px 0;
+
+      &__header {
+        font-size: 2.2rem;
+      }
+
+      &__content {
+        font-size: 2rem;
+        line-height: 26px;
+      }
+    }
+  }
+}
