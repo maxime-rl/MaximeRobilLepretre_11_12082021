@@ -6,8 +6,8 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        <img src={logo} alt="Logo Kasa" />
-        <p>© 2020 Kasa. All rights reserved</p>
+        <img className="footer__logo" src={logo} alt="Logo Kasa" />
+        <p className="footer__infos">© 2020 Kasa. All rights reserved</p>
       </footer>
     );
   }

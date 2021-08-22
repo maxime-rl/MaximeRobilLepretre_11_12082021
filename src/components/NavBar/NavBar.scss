@@ -5,18 +5,25 @@
   justify-content: space-between;
   padding: 15px;
 
-  img {
+  &__logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
     width: 100px;
+
     @include breakpoint(xl) {
       width: 130px;
     }
   }
 
-  ul {
+  &__nav {
     display: flex;
   }
 
-  li {
+  &__nav-links {
     padding: 0 20px 0 20px;
 
     &:last-child {

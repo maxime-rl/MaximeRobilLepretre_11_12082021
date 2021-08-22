@@ -8,7 +8,7 @@
     margin: 30px;
   }
 
-  h2 {
+  &__title {
     position: absolute;
     bottom: 15px;
     padding: 0 0 0 15px;
@@ -18,7 +18,7 @@
     color: $colorWhite;
   }
 
-  img {
+  &__picture {
     object-position: center;
     width: 100%;
     height: 250px;

@@ -10,7 +10,11 @@ class Error404Page extends Component {
         <p className="error404-page__info-text">
           Oups! La page que vous demandez n'existe pas.
         </p>
-        <NavLink activeClassName="active-link" to="/">
+        <NavLink
+          className="error404-page__redirect-link"
+          activeClassName="active-link"
+          to="/"
+        >
           Retourner sur la page d'accueil
         </NavLink>
       </main>

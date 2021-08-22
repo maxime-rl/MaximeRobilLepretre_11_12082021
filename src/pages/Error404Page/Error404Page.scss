@@ -38,7 +38,7 @@
     }
   }
 
-  a {
+  &__redirect-link {
     font-size: 1.4rem;
     @include breakpoint(lg) {
       font-size: 1.8rem;

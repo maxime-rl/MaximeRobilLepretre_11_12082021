@@ -7,7 +7,7 @@
   align-items: center;
   padding: 0 15px;
 
-  img {
+  &__picture {
     position: relative;
     border-radius: $radius-10;
     min-height: 110px;
@@ -18,7 +18,7 @@
     }
   }
 
-  h1 {
+  &__title {
     position: absolute;
     padding: 15px;
     line-height: 100%;

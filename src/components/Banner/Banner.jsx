@@ -9,8 +9,8 @@ class Banner extends Component {
 
     return (
       <div className="banner global-layout-wrapper">
-        <img src={src} alt={alt} />
-        {title ? <h1>{title}</h1> : null}
+        <img className="banner__picture" src={src} alt={alt} />
+        {title ? <h1 className="banner__title">{title}</h1> : null}
       </div>
     );
   }

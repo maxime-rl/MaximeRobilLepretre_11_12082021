@@ -10,8 +10,8 @@ class PropertyCard extends Component {
     return (
       <Link to={`/property-location/${id}`}>
         <article className="property-card">
-          <h2>{title}</h2>
-          <img src={src} alt={title} />
+          <h2 className="property-card__title">{title}</h2>
+          <img className="property-card__picture" src={src} alt={title} />
         </article>
       </Link>
     );
