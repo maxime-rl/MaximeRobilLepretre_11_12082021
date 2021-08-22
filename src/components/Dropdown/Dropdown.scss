@@ -1,4 +1,5 @@
 @import "../../styles/_utils/variables.scss";
+@import "../../styles/_utils/mixins.scss";
 
 .dropdown {
   margin: 10px 0;
@@ -15,6 +16,10 @@
     font-size: 1.3rem;
     font-weight: 500;
     cursor: pointer;
+
+    @include breakpoint(xl) {
+      font-size: 1.8rem;
+    }
   }
 
   &__arrow {
@@ -28,6 +33,10 @@
 
   p {
     line-height: 18px;
+
+    @include breakpoint(xl) {
+      line-height: 22px;
+    }
   }
 
   &__content {
@@ -40,8 +49,14 @@
     background-color: $colorGray;
     border-radius: 0 0 5px 5px;
 
+    @include breakpoint(xl) {
+      font-size: 1.6rem;
+      line-height: 22px;
+    }
+
     &--open {
       display: block;
+      height: calc(100% - 65px);
     }
 
     &--close {

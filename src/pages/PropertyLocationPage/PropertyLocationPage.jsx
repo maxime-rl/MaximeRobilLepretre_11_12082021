@@ -26,10 +26,10 @@ class PropertyLocationPage extends Component {
 
     return (
       <>
-        <header className="property-header">
+        <header className="property-header global-layout-wrapper">
           <Carousel pictures={pictures} alt={title} />
         </header>
-        <main className="property-main">
+        <main className="property-main global-layout-wrapper">
           <h1 className="property-main__title">{title}</h1>
           <p className="property-main__location">{location}</p>
           <TagList tags={tags} />

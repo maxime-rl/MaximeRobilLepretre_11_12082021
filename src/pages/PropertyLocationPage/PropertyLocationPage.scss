@@ -1,3 +1,5 @@
+@import "../../styles/_utils/mixins.scss";
+
 .property-header {
   padding: 0 15px 15px 15px;
 }
@@ -15,12 +17,42 @@
     "dropdown-two dropdown-two";
   padding: 0 15px 15px 15px;
 
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "title title host"
+      "location location location"
+      "tag-list tag-list rating-list"
+      "dropdown-one dropdown-one dropdown-one"
+      "dropdown-two dropdown-two dropdown-two";
+  }
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "title title title host"
+      "location location location location"
+      "tag-list tag-list tag-list rating-list"
+      "dropdown-one dropdown-one dropdown-two dropdown-two";
+  }
+
   &__title {
     grid-area: title;
+    display: flex;
+    align-items: center;
     margin: 0;
     font-size: 1.8rem;
     line-height: 26px;
     font-weight: 500;
+
+    @include breakpoint(md) {
+      font-size: 2.2rem;
+    }
+
+    @include breakpoint(xl) {
+      font-size: 3.6rem;
+      line-height: 45px;
+    }
   }
 
   &__location {
@@ -28,14 +60,39 @@
     margin: 5px 0;
     font-size: 1.4rem;
     font-weight: 400;
+
+    @include breakpoint(xl) {
+      font-size: 1.8rem;
+    }
   }
 
   .tag-list {
     grid-area: tag-list;
+
+    @include breakpoint(xl) {
+      margin: 25px 0 20px 0;
+    }
   }
 
   .rating-list {
     grid-area: rating-list;
+
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin: 5px 0 0 0;
+
+        @include breakpoint(xl) {
+          margin: 0;
+        }
+      }
+    }
+
+    @include breakpoint(xl) {
+      margin: 25px 0 20px 0;
+    }
   }
 
   .host {
@@ -44,9 +101,25 @@
 
   .dropdown {
     grid-area: dropdown-one;
+
+    @include breakpoint(md) {
+      margin: 10px 5px 10px 0;
+    }
+
+    @include breakpoint(xl) {
+      margin: 10px 40px 20px 0;
+    }
   }
 
   .dropdown:last-child {
     grid-area: dropdown-two;
+
+    @include breakpoint(md) {
+      margin: 10px 0 10px 5px;
+    }
+
+    @include breakpoint(xl) {
+      margin: 10px 0 20px 40px;
+    }
   }
 }

@@ -1,8 +1,14 @@
+@import "../../styles/_utils/mixins.scss";
+
 .rating-list {
   display: flex;
 
   &__rate {
     margin: 0 3px;
     width: 15px;
+
+    @include breakpoint(xl) {
+      width: 30px;
+    }
   }
 }
