@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./PropertyCard.scss";
 
+/**
+ * PropertyCard component
+ * @param {string} id property id used for individual display in PropertyLocationPage
+ * @param {string} title property title
+ * @param {string} src property picture url
+ */
 class PropertyCard extends Component {
   render() {
     const { id, title, src } = this.props;

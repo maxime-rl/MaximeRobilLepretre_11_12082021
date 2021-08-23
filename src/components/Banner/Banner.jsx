@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Banner.scss";
 
-// Banner to render header with conditional title
+/**
+ * Banner component use for headers with conditional title
+ * @param {string} src banner picture url
+ * @param {string} alt picture alt tag content
+ * @param {string} title banner conditional title
+ */
 class Banner extends Component {
   render() {
     const { src, alt, title } = this.props;

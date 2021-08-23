@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./Error404Page.scss";
 
+/**
+ * Error404Page component
+ * Display error 404 page
+ */
 class Error404Page extends Component {
   render() {
     return (

@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import logo from "../../assets/kasa_logo_white.svg";
 import "./Footer.scss";
 
+/**
+ * Footer component
+ * footer for the whole application
+ */
 class Footer extends Component {
   render() {
     return (

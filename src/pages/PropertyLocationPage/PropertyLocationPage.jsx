@@ -2,11 +2,18 @@ import React, { Component } from "react";
 import { data } from "../../data/data";
 import Error404Page from "../Error404Page/Error404Page";
 import { Rating, Dropdown, Carousel, TagList, Host } from "../../components";
+import PropTypes from "prop-types";
 import "./PropertyLocationPage.scss";
 
+/**
+ * PropertyLocationPage component
+ * @param {string} match.params.id id of a property injected into the url
+ * @property {object} currentProperty current property matching with url id
+ */
 class PropertyLocationPage extends Component {
   render() {
     const idUrlParam = this.props.match.params.id;
+
     const currentProperty = data.find((elt) => elt.id === idUrlParam);
 
     if (!currentProperty) {
@@ -23,6 +30,7 @@ class PropertyLocationPage extends Component {
       host,
       location,
     } = currentProperty;
+    console.log(currentProperty);
 
     return (
       <>
@@ -42,5 +50,11 @@ class PropertyLocationPage extends Component {
     );
   }
 }
+
+PropertyLocationPage.propTypes = {
+  match: PropTypes.shape({
+    idUrlParam: PropTypes.string,
+  }).isRequired,
+};
 
 export default PropertyLocationPage;

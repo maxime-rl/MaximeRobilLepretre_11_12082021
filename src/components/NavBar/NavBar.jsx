@@ -3,6 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/kasa_logo_color.svg";
 import "./NavBar.scss";
 
+/**
+ * NavBar component
+ * main navigation for the whole application
+ */
 class NavBar extends Component {
   render() {
     return (

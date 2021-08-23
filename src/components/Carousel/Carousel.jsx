@@ -4,6 +4,12 @@ import arrow from "../../assets/arrow.svg";
 import PropTypes from "prop-types";
 import "./Carousel.scss";
 
+/**
+ * Carousel component
+ * @param {array} pictures carousel pictures
+ * @param {string} alt title of the properties used in the alt tag of each picture in the carousel
+ * @property {number} currentPictureIndex state for manage pictures position
+ */
 class Carousel extends Component {
   constructor(props) {
     super(props);

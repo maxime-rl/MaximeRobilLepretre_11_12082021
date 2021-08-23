@@ -4,6 +4,10 @@ import aboutBanner from "../../assets/about_banner.jpg";
 import { dropdownContentAboutPage } from "../../data/data";
 import "./AboutPage.scss";
 
+/**
+ * AboutPage component
+ * Display about page
+ */
 class AboutPage extends Component {
   render() {
     return (

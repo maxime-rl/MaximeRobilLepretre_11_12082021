@@ -4,6 +4,10 @@ import starEmpty from "../../assets/star_empty.svg";
 import PropTypes from "prop-types";
 import "./Rating.scss";
 
+/**
+ * Rating component
+ * @param {number} rating property rating
+ */
 class Rating extends Component {
   render() {
     const { rating } = this.props;

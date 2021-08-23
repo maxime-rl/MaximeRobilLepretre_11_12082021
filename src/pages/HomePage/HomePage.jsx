@@ -4,6 +4,10 @@ import homeBanner from "../../assets/home_banner.jpg";
 import { data } from "../../data/data";
 import "./HomePage.scss";
 
+/**
+ * HomePage component
+ * Display Kasa home page
+ */
 class HomePage extends Component {
   render() {
     return (
