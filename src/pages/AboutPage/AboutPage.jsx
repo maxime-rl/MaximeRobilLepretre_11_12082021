@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Banner, Dropdown } from "../../components";
 import aboutBanner from "../../assets/about_banner.jpg";
-import { dropdownContentAboutPage } from "../../data/dropdownContentAboutPage";
+import { dropdownContentAboutPage } from "../../data/data";
 import "./AboutPage.scss";
 
 /**
