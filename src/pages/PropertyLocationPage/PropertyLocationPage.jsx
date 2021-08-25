@@ -1,13 +1,44 @@
 import React, { Component } from "react";
-import { data } from "../../data/data";
 import Error404Page from "../Error404Page/Error404Page";
 import { Rating, Dropdown, Carousel, TagList, Host } from "../../components";
+import PropTypes from "prop-types";
 import "./PropertyLocationPage.scss";
 
+/**
+ * PropertyLocationPage component
+ * @param {string} match.params.id id of a property injected into the url
+ * @param {object} data data containing all the information for current property
+ * @property {object} currentProperty current property data matching with url id after fetch data
+ */
 class PropertyLocationPage extends Component {
+  constructor(props) {
+    super(props);
+    this.idUrlParam = this.props.match.params.id;
+    this.state = { data: [] };
+  }
+
+  componentDidMount() {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("../../data/data.json");
+
+        if (response.ok) {
+          const data = await response.json();
+          this.setState({
+            currentProperty: data.find((elt) => elt.id === this.idUrlParam),
+          });
+        } else {
+          throw new Error(`Erreur HTTP ! statut : ${response.status}`);
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchData();
+  }
+
   render() {
-    const idUrlParam = this.props.match.params.id;
-    const currentProperty = data.find((elt) => elt.id === idUrlParam);
+    const { currentProperty } = this.state;
 
     if (!currentProperty) {
       return <Error404Page />;
@@ -42,5 +73,11 @@ class PropertyLocationPage extends Component {
     );
   }
 }
+
+PropertyLocationPage.propTypes = {
+  match: PropTypes.shape({
+    idUrlParam: PropTypes.string,
+  }).isRequired,
+};
 
 export default PropertyLocationPage;

@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Banner, PropertyList } from "../../components";
 import homeBanner from "../../assets/home_banner.jpg";
-import { data } from "../../data/data";
 import "./HomePage.scss";
 
+/**
+ * HomePage component
+ * Display Kasa home page
+ */
 class HomePage extends Component {
   render() {
     return (
@@ -16,7 +19,7 @@ class HomePage extends Component {
           />
         </header>
         <main className="home-main global-layout-wrapper">
-          <PropertyList kasa_DATA={data} />
+          <PropertyList />
         </main>
       </>
     );

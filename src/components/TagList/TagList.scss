@@ -15,7 +15,6 @@
     color: $colorWhite;
     background-color: $colorPrimary;
     border-radius: 5px;
-
     @include breakpoint(xl) {
       padding: 0 35px;
       height: 25px;

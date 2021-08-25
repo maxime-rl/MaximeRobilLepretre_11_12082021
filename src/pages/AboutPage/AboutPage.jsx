@@ -1,14 +1,29 @@
 import React, { Component } from "react";
-import { Banner } from "../../components";
+import { Banner, Dropdown } from "../../components";
 import aboutBanner from "../../assets/about_banner.jpg";
+import { dropdownContentAboutPage } from "../../data/dropdownContentAboutPage";
+import "./AboutPage.scss";
 
+/**
+ * AboutPage component
+ * Display about page
+ */
 class AboutPage extends Component {
   render() {
     return (
       <>
-        <header>
+        <header className="about-header">
           <Banner src={aboutBanner} alt="Paysage nature" />
         </header>
+        <main className="about-main">
+          {dropdownContentAboutPage.map(({ title, content, index }) => (
+            <Dropdown
+              key={`${title}-${index}`}
+              header={title}
+              content={content}
+            />
+          ))}
+        </main>
       </>
     );
   }

@@ -3,6 +3,12 @@ import arrow from "../../assets/arrow.svg";
 import PropTypes from "prop-types";
 import "./Dropdown.scss";
 
+/**
+ * Dropdown component
+ * @param {string} header dropdown toggle button title
+ * @param {string} content content of the dropdown
+ * @property {boolean} isOpen state to manage the dropdown toggle
+ */
 class Dropdown extends Component {
   constructor(props) {
     super(props);
