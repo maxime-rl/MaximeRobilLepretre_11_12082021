@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { data } from "../../data/data";
+import FetchData from "../../FetchData/FetchData";
 import Error404Page from "../Error404Page/Error404Page";
 import { Rating, Dropdown, Carousel, TagList, Host } from "../../components";
 import PropTypes from "prop-types";
@@ -8,13 +8,32 @@ import "./PropertyLocationPage.scss";
 /**
  * PropertyLocationPage component
  * @param {string} match.params.id id of a property injected into the url
- * @param {object} data hard data containing all the information for current property
- * @param {object} currentProperty current property data matching with url id
+ * @param {object} data data containing all the information for current property
+ * @param {object} currentProperty current property data matching with url id after fetch data
  */
 class PropertyLocationPage extends Component {
+  constructor(props) {
+    super(props);
+    this.idUrlParam = this.props.match.params.id;
+    this.state = { data: [] };
+  }
+
+  componentDidMount() {
+    this.mounted = true;
+    this.getData();
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
+  async getData() {
+    const data = await new FetchData().getPropertyByID(this.idUrlParam);
+    this.setState({ currentProperty: data });
+  }
+
   render() {
-    const idUrlParam = this.props.match.params.id;
-    const currentProperty = data.find((elt) => elt.id === idUrlParam);
+    const { currentProperty } = this.state;
 
     if (!currentProperty) {
       return <Error404Page />;
