@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { PropertyCard } from "../../components";
+import FetchData from "../../FetchData/FetchData";
 import "./PropertyList.scss";
 
 /**
@@ -14,21 +15,17 @@ class PropertyList extends Component {
   }
 
   componentDidMount() {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("./data/data.json");
+    this.mounted = true;
+    this.getData();
+  }
 
-        if (response.ok) {
-          const data = await response.json();
-          this.setState({ data: data });
-        } else {
-          throw new Error(`Erreur HTTP ! statut : ${response.status}`);
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchData();
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
+  async getData() {
+    const data = await new FetchData().getAllPropertyCards();
+    this.setState({ data: data });
   }
 
   render() {
