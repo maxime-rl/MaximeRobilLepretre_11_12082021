@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FetchData from "../../FetchData/FetchData";
 import Error404Page from "../Error404Page/Error404Page";
 import { Rating, Dropdown, Carousel, TagList, Host } from "../../components";
 import PropTypes from "prop-types";
@@ -18,23 +19,17 @@ class PropertyLocationPage extends Component {
   }
 
   componentDidMount() {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("../../data/data.json");
+    this.mounted = true;
+    this.getData();
+  }
 
-        if (response.ok) {
-          const data = await response.json();
-          this.setState({
-            currentProperty: data.find((elt) => elt.id === this.idUrlParam),
-          });
-        } else {
-          throw new Error(`Erreur HTTP ! statut : ${response.status}`);
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    };
-    fetchData();
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
+  async getData() {
+    const data = await new FetchData().getPropertyByID(this.idUrlParam);
+    this.setState({ currentProperty: data });
   }
 
   render() {

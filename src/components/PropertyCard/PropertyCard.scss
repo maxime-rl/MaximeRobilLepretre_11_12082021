@@ -5,7 +5,7 @@
   position: relative;
   margin: 15px 0;
   top: 0;
-  transition: all 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out;
   @include breakpoint(md) {
     margin: 30px;
   }
@@ -32,17 +32,17 @@
 
   &:hover {
     top: -3.5px;
-    transition: all 0.2s ease-in;
+    transition: top 0.2s ease-in;
 
     &::after {
       box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease-in;
+      transition: box-shadow 0.2s ease-in;
     }
   }
 
   &:hover img {
     filter: brightness(80%);
-    transition: all 0.2s ease-in;
+    transition: filter 0.2s ease-in;
   }
 
   &__title {
@@ -68,7 +68,7 @@
     height: 250px;
     border-radius: $radius-10;
     filter: brightness(100%);
-    transition: all 0.2s ease-in;
+    transition: filter 0.2s ease-in;
     @include breakpoint(md) {
       width: 340px;
       height: 340px;

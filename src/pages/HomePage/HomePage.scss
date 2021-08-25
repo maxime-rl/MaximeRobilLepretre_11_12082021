@@ -1,6 +1,7 @@
 @import "../../styles/_utils/mixins.scss";
 
 .home-main {
+  flex-grow: 1;
   @include breakpoint(xl) {
     padding: 0 15px;
   }
