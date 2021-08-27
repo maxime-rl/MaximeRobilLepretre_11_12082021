@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import arrow from "../../assets/arrow.svg";
 import PropTypes from "prop-types";
 import "./Dropdown.scss";
 
@@ -55,17 +54,9 @@ class Dropdown extends Component {
         >
           <div className="dropdown__header-title">{header}</div>
           {isOpen ? (
-            <img
-              className="dropdown__arrow dropdown__arrow--up"
-              src={arrow}
-              alt="icône dropdown ouvert"
-            />
+            <i className="dropdown__arrow dropdown__arrow--up"></i>
           ) : (
-            <img
-              className="dropdown__arrow dropdown__arrow--down"
-              src={arrow}
-              alt="icône dropdown fermé"
-            />
+            <i className="dropdown__arrow"></i>
           )}
         </button>
         {typeof content === "string" ? (
