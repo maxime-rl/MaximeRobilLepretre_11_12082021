@@ -1,0 +1,39 @@
+@import "../../styles/_utils/variables.scss";
+@import "../../styles/_utils/mixins.scss";
+
+.scroll-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: $colorBlack;
+  cursor: pointer;
+  @include breakpoint(md) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    background-color: $colorPrimary-darken;
+    transition: all 0.1s ease-in;
+  }
+
+  img {
+    width: 15px;
+    object-fit: contain;
+    transform: rotate(180deg);
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

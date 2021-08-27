@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { NavBar, Footer } from "../components";
+import { NavBar, Footer, ScrollToTopBtn } from "../components";
 import {
   HomePage,
   AboutPage,
@@ -30,6 +30,7 @@ class App extends Component {
               <Error404Page />
             </Route>
           </Switch>
+          <ScrollToTopBtn />
           <Footer />
         </ReFocus>
         <ScrollToTop />

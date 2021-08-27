@@ -66,14 +66,6 @@ class Carousel extends Component {
           src={pictures[currentPictureIndex]}
           alt={`Photo ${alt} numéro ${currentPictureIndex + 1}`}
         />
-        {/* {pictures.length > 1 && (
-          <button
-            className="carousel__btn-nav carousel__btn-nav--next"
-            onClick={() => this.goToNextPicture()}
-          >
-            <img src={arrow} alt="boutton image suivante du carousel" />
-          </button>
-        )} */}
       </div>
     );
   }
