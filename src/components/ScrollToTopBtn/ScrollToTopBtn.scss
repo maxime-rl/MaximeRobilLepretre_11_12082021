@@ -23,9 +23,15 @@
     transition: all 0.1s ease-in;
   }
 
-  img {
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../../assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
     width: 15px;
-    object-fit: contain;
+    height: 15px;
     transform: rotate(180deg);
   }
 }

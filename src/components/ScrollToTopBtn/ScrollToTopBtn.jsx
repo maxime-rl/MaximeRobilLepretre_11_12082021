@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import arrow from "../../assets/arrow.svg";
+// import arrow from "../../assets/arrow.svg";
 import "./ScrollToTopBtn.scss";
 
 /**
@@ -46,9 +46,7 @@ class ScrollToTopBtn extends Component {
     const { isVisible } = this.state;
 
     return isVisible ? (
-      <button className="scroll-to-top-btn" onClick={this.scrollToTop}>
-        <img src={arrow} alt="" />
-      </button>
+      <button className="scroll-to-top-btn" onClick={this.scrollToTop}></button>
     ) : null;
   }
 }
