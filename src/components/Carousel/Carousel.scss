@@ -64,6 +64,19 @@
     }
   }
 
+  &__counter {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    @include breakpoint(lg) {
+      font-size: 1.4rem;
+    }
+  }
+
   &__picture {
     height: 255px;
     border-radius: $radius-10;

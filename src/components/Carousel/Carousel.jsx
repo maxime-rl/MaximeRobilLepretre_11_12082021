@@ -42,27 +42,38 @@ class Carousel extends Component {
 
     return (
       <div className="carousel">
-        {pictures.length > 1 && (
-          <button
-            className="carousel__btn-nav carousel__btn-nav--prev"
-            onClick={() => this.goToPrevPicture()}
-          >
-            <img src={arrow} alt="boutton image précédente du carousel" />
-          </button>
-        )}
+        {pictures.length > 1 ? (
+          <div>
+            <button
+              className="carousel__btn-nav carousel__btn-nav--prev"
+              onClick={() => this.goToPrevPicture()}
+            >
+              <img src={arrow} alt="boutton image précédente du carousel" />
+            </button>
+            <span className="carousel__counter">
+              {currentPictureIndex + 1}/{pictures.length}
+            </span>
+            <button
+              className="carousel__btn-nav carousel__btn-nav--next"
+              onClick={() => this.goToNextPicture()}
+            >
+              <img src={arrow} alt="boutton image suivante du carousel" />
+            </button>
+          </div>
+        ) : null}
         <img
           className="carousel__picture"
           src={pictures[currentPictureIndex]}
           alt={`Photo ${alt} numéro ${currentPictureIndex + 1}`}
         />
-        {pictures.length > 1 && (
+        {/* {pictures.length > 1 && (
           <button
             className="carousel__btn-nav carousel__btn-nav--next"
             onClick={() => this.goToNextPicture()}
           >
             <img src={arrow} alt="boutton image suivante du carousel" />
           </button>
-        )}
+        )} */}
       </div>
     );
   }
