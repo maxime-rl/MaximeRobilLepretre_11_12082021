@@ -4,10 +4,25 @@
   display: flex;
 
   &__rate {
+    display: inline-block;
     margin: 0 3px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
     width: 15px;
+    height: 15px;
     @include breakpoint(xl) {
+      background-size: 30px;
       width: 30px;
+      height: 30px;
+    }
+
+    &--full {
+      background-image: url(../../assets/star_full.svg);
+    }
+
+    &--empty {
+      background-image: url(../../assets/star_empty.svg);
     }
   }
 }

@@ -28,8 +28,12 @@
   }
 
   &__arrow {
-    object-fit: contain;
+    background-image: url(../../assets/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
     width: 15px;
+    height: 15px;
     @include breakpoint(xl) {
       width: 20px;
     }

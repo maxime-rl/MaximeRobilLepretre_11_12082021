@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import starFull from "../../assets/star_full.svg";
-import starEmpty from "../../assets/star_empty.svg";
 import PropTypes from "prop-types";
 import "./Rating.scss";
 
@@ -18,19 +16,11 @@ class Rating extends Component {
         {range.map((index) =>
           rating >= index ? (
             <li key={index}>
-              <img
-                className="rating-list__rate"
-                src={starFull}
-                alt="note valide"
-              />
+              <i className="rating-list__rate rating-list__rate--full"></i>
             </li>
           ) : (
             <li key={index}>
-              <img
-                className="rating-list__rate"
-                src={starEmpty}
-                alt="note non valide"
-              />
+              <i className="rating-list__rate rating-list__rate--empty"></i>
             </li>
           )
         )}

@@ -7,7 +7,8 @@
 .property-main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-auto-rows: min-content;
+  grid-template-rows: inherit;
   grid-template-areas:
     "title title"
     "location location"
@@ -15,6 +16,7 @@
     "rating-list host"
     "dropdown-one dropdown-one"
     "dropdown-two dropdown-two";
+  flex-grow: 1;
   padding: 0 15px 15px 15px;
   @include breakpoint(sm) {
     grid-template-columns: repeat(3, 1fr);

@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from "react";
-import arrow from "../../assets/arrow.svg";
 import PropTypes from "prop-types";
 import "./Carousel.scss";
 
@@ -47,18 +46,14 @@ class Carousel extends Component {
             <button
               className="carousel__btn-nav carousel__btn-nav--prev"
               onClick={() => this.goToPrevPicture()}
-            >
-              <img src={arrow} alt="boutton image précédente du carousel" />
-            </button>
+            ></button>
             <span className="carousel__counter">
               {currentPictureIndex + 1}/{pictures.length}
             </span>
             <button
               className="carousel__btn-nav carousel__btn-nav--next"
               onClick={() => this.goToNextPicture()}
-            >
-              <img src={arrow} alt="boutton image suivante du carousel" />
-            </button>
+            ></button>
           </div>
         ) : null}
         <img
