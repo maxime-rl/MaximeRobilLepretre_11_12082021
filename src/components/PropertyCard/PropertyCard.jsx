@@ -30,10 +30,4 @@ PropertyCard.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
-/* defaultProps on image source, test the rendering when the component will be
-hydrated from the data with PropertyList and built on the HomePage */
-PropertyCard.defaultProps = {
-  src: "https://via.placeholder.com/340/000000/FF6060/?text=Kasa",
-};
-
 export default PropertyCard;
