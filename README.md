@@ -1,4 +1,4 @@
-[![Kasa Logo](https://maxime-rl.github.io/maxime-robil-lepretre_11_12082021/src/assets/kasa_logo_white.svg)](https://maxime-robil-lepretre-p11-oc.netlify.app/)
+# Kasa
 
 ***Projet n°11*** de la formation OpenClassrooms "Développeur Front End"
 
