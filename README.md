@@ -1,4 +1,4 @@
-[![Kasa Logo](https://maxime-rl.github.io/MaximeRobilLepretre_11_12082021/assets/kasa_logo_white.svg)](https://maxime-robil-lepretre-p11-oc.netlify.app/)
+[![Kasa Logo](https://maxime-rl.github.io/maxime-robil-lepretre_11_12082021/assets/kasa_logo_white.svg)](https://maxime-robil-lepretre-p11-oc.netlify.app/)
 
 ***Projet n°11*** de la formation OpenClassrooms "Développeur Front End"
 
@@ -20,5 +20,3 @@ Application amorcée avec create-react-app
 ## Usage
 `dev: yarn start`<br>
 `build: yarn build`
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f8dc8f83-d36f-448d-817b-751f7c642e4f/deploy-status)](https://app.netlify.com/sites/maxime-robil-lepretre-p11-oc/deploys)
